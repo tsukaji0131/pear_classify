@@ -120,13 +120,13 @@ width_ratio_List = []
 aspect_ratio_List = []
 order = 10
 
-file_path = "D:\\Le_Lectier\\2021\\before_ripe\\"
+file_path = "D:\\vscodepy3\\Le_Lectier\\2021\\before_ripe\\"
 #自宅PC
 # D:\\vscodepy3\\Le_Lectier\\2021\\before_ripe\\
 #研究室PC
 # D:\\2022_resarch_Tsukahara\\Data\\pear_data\\2021\\before_ripe\\
 
-csv_input = pandas.read_csv(filepath_or_buffer="dataset.csv", encoding="ms932", sep=",")
+csv_input = pandas.read_csv(filepath_or_buffer="D:\\vscodepy3\\dataset.csv", encoding="ms932", sep=",")
 dataset = csv_input.values
 
 for columns in dataset:
@@ -163,6 +163,11 @@ feature = pcamodel.transform(coefficient_List)
 
 random_state = 1
 clf = svm.SVC(random_state=random_state)
+#clf = RandomForestClassifier(random_state=random_state)
+#clf = MLPClassifier(max_iter=2500,random_state=random_state )
+#clf = GradientBoostingClassifier(random_state=random_state)
+#clf = DecisionTreeClassifier(,random_state=random_state)
+#clf = LogisticRegression(random_state=random_state)
 
 scoring = { "p": "precision_macro",
             "a": "accuracy",
