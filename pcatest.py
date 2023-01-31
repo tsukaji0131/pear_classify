@@ -163,11 +163,6 @@ feature = pcamodel.transform(coefficient_List)
 
 random_state = 1
 clf = svm.SVC(random_state=random_state)
-#clf = RandomForestClassifier(random_state=random_state)
-#clf = MLPClassifier(max_iter=2500,random_state=random_state )
-#clf = GradientBoostingClassifier(random_state=random_state)
-#clf = DecisionTreeClassifier(,random_state=random_state)
-#clf = LogisticRegression(random_state=random_state)
 
 scoring = { "p": "precision_macro",
             "a": "accuracy",
